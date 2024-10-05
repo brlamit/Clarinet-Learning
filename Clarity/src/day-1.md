@@ -101,24 +101,24 @@ These are more complex types that contain a number of other types. Composites ma
 
     * Wrapping an unsigned integer:
 
-        (some u5)
+            (some u5)
 
     * Wrapping an ASCII string:
 
-        (some "An optional string.")
+            (some "An optional string.")
     
     * Wrapping a principal:
-    
-        (some 'ST1HTBVD3JG9C05J7HBJTHGR0GGW7KXW28M5JS8QE)
 
-If there is no value, it is represented by the keyword none. Functions that might or might not return a value often return an optional type. For instance, attempting to retrieve an element from a list at an invalid index might return none:
+            (some 'ST1HTBVD3JG9C05J7HBJTHGR0GGW7KXW28M5JS8QE)
 
-    (element-at (list 4 8 15 16 23 42) u5000)
-    
-To access the value within an optional, you must unwrap it. Using unwrap-panic will return the value if it exists, but will throw an error if the value is none:
+    If there is no value, it is represented by the keyword none. Functions that might or might not return a value often return an optional type. For instance, attempting to retrieve an element from a list at an invalid index might return none:
 
-    (unwrap-panic (some u10)) ;; Returns u10
-    (unwrap-panic none) ;; Throws an error
+        (element-at (list 4 8 15 16 23 42) u5000)
+        
+    To access the value within an optional, you must unwrap it. Using unwrap-panic will return the value if it exists, but will throw an error if the value is none:
+
+        (unwrap-panic (some u10)) ;; Returns u10
+        (unwrap-panic none) ;; Throws an error
 
 * Tuples:
 
