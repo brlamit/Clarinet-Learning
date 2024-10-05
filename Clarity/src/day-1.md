@@ -14,21 +14,21 @@ Types of Clarinet:
 
 This types are the most basic components. It can be signed or unsigned integers, booleans and principals.
     
-Signed Integers:
+* Signed Integers:
 This types of integers are 128 bit numbers which can be positive or negative. The range of signed 
 integer is from -2^127 to 2^127 - 1. 
 
     Example:
     23, -114, 4545,....
 
-Unsigned Integers:
+* Unsigned Integers:
 This types of integers are 128 bit numbers which can only be positive numbers. The range of unsigned 
 integer is from 0 to 2^128 - 1. These integers are always prefixed by the characeter 'u'.
 
     Example:
     u2, u2423423,.....
 
-Booleans:
+* Booleans:
 This types of integers can either be true or fslse. It is used to check that if certain conditions are met or not.Some built in functions which accept booleans are:
 
     not (inverts a boolean):
@@ -40,7 +40,7 @@ This types of integers can either be true or fslse. It is used to check that if 
     or (returns true if at least one input is true):
     (or false true false)
 
-Principals:
+* Principals:
 
 In Clarity, a principal represents a Stacks address on the blockchain and serves as a unique identifier, similar to how an email address or bank account number functions—though it's tailored for blockchain use. It's often referred to as a wallet address. Principals follow a specific structure, always starting with SP for Stacks mainnet addresses, and ST for addresses on the testnet and mocknet. Principals can be categorized into two types:
 
@@ -48,6 +48,6 @@ In Clarity, a principal represents a Stacks address on the blockchain and serves
 
 ->Contract Principals: These refer to smart contracts on the blockchain.
 
-    2.Sequences 
+2.Sequences 
 
-    3.Composites 
+3.Composites 
