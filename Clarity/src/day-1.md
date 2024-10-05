@@ -35,12 +35,15 @@ This types are the most basic components. It can be signed or unsigned integers,
     This types of integers can either be true or fslse. It is used to check that if certain conditions are met or not.Some built in functions which accept booleans are:
 
     not (inverts a boolean):
+
         (not true)
 
     and (returns true if all inputs are true):
+
         (and true true true)
 
     or (returns true if at least one input is true):
+
         (or false true false)
 
 * Principals:
@@ -67,8 +70,11 @@ This type holds a sequence of data. Clarity mostly provide three kinds of sequen
     A string in Clarity is a sequence of characters, defined as either ASCII strings or UTF-8 strings. ASCII strings are limited to basic Latin characters, while UTF-8 strings can include more diverse characters, such as emoji. Both types of strings are enclosed in double quotes ("), but UTF-8 strings are distinguished by a u prefix. Like buffers, strings have a fixed maximum length in Clarity.
 
     ASCII:
+
         "This is an ASCII string"
+
     UTF-8:
+
         u"And this is an UTF-8 string \u{1f601}"
 
 * Lists:
@@ -94,12 +100,15 @@ These are more complex types that contain a number of other types. Composites ma
     In Clarity, every value must always be defined—booleans are either true or false, and integers always have a number. However, when you need to express a variable that could have a value or nothing at all, you use the optional type. An optional wraps another type and can either contain none or a value of that type. For example:
 
     * Wrapping an unsigned integer:
+
         (some u5)
 
     * Wrapping an ASCII string:
+
         (some "An optional string.")
     
     * Wrapping a principal:
+    
         (some 'ST1HTBVD3JG9C05J7HBJTHGR0GGW7KXW28M5JS8QE)
 
 If there is no value, it is represented by the keyword none. Functions that might or might not return a value often return an optional type. For instance, attempting to retrieve an element from a list at an invalid index might return none:
