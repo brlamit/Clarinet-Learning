@@ -1,6 +1,6 @@
 Keywords
 
-Keywords are the sepcial terms which has a meaning. There are different tyoes of keywords in clarity like : true , false, none, etc. Some other keywords are :
+Keywords are the special terms which has a meaning. There are different types of keywords in clarity like : true , false, none, etc. Some other keywords are :
 
 * Block-height
 
