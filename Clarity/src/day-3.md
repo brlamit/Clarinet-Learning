@@ -57,19 +57,19 @@ Mainly there are three types of storage in smart contract.
 
     Each variable has a type signature that determines the kind of data it can hold. Here are common types:
 
-      | Type              | Signature                                           |
-      |-------------------|-----------------------------------------------------|
-      | **Signed integer** | `int`                                              |
-      | **Unsigned integer**| `uint`                                            |
-      | **Boolean**        | `bool`                                             |
-      | **Principal**      | `principal`                                        |
-      | **Buffer**         | `(buff max-len)`, where `max-len` is the max length|
-      | **ASCII string**   | `(string-ascii max-len)`, max length is `max-len`  |
-      | **UTF-8 string**   | `(string-utf8 max-len)`, max length is `max-len`   |
-      | **List**           | `(list max-len element-type)`                      |
-      | **Optional**       | `(optional some-type)`                             |
-      | **Tuple**          | `{key1: entry-type, key2: entry-type}`             |
-      | **Response**       | `(response ok-type err-type)`                      |
+      | Type              | Signature                                        |
+      |-------------------|--------------------------------------------------|
+      | Signed integer    | int                                              |
+      | Unsigned integer  | uint                                             |
+      | Boolean           | bool                                             |
+      | Principal         | principal                                        |
+      | Buffer            | (buff max-len), where max-len is the max length  |
+      | ASCII string      | (string-ascii max-len), max length is max-len    |
+      | UTF-8 string      | (string-utf8 max-len), max length is max-len     |
+      | List              | (list max-len element-type)                      |
+      | Optional          | (optional some-type)                             |
+      | Tuple             | {key1: entry-type, key2: entry-type}             |
+      | Response          | (response ok-type err-type)                      |
 
 
     Variables are strictly limited by these types, and exceeding the maximum length for types like strings or buffers will result in errors.
@@ -136,7 +136,7 @@ Mainly there are three types of storage in smart contract.
 
     Maps are not iterable i.e we cannot loop through maps and retrive all values. We can only access value in a map by specifying the right key.
 
-    There are two function in map:
+    There are three function in map:
 
     * map-set : This function is used to overwrite existing values.
 
@@ -162,6 +162,23 @@ Mainly there are three types of storage in smart contract.
 
         ;; Will return none because the entry got deleted.
         (print (map-get? scores tx-sender))
+
+    
+    When you attempt to retrieve a value from a map, it may fail if the key does not exist. In such cases, map-get? returns an optional value, typically none. You will often need to unwrap this optional value to use it in your code.
+
+        (define-map names (string-ascii 34) principal)
+
+        ;; Map the name "Clarity" to the tx-sender.
+        (map-set names "Clarity" tx-sender)
+
+        ;; Retrieve the principal related to "Clarity".
+        (print (map-get? names "Clarity"))
+
+        ;; Attempt to retrieve a non-existent key; returns `none`.
+        (print (map-get? names "bogus"))
+
+        ;; Unwrap a value, causing a panic if the key doesn't exist.
+        (print (unwrap-panic (map-get? names "Clarity")))
 
     
 
