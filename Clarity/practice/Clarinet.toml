@@ -9,6 +9,21 @@ requirements = []
 path = 'contracts/hello.clar'
 clarity_version = 2
 epoch = 2.5
+
+[contracts.private-function-Example]
+path = 'contracts/private-function-Example.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.public-function-Example]
+path = 'contracts/public-function-Example.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.read-only-function]
+path = 'contracts/read-only-function.clar'
+clarity_version = 2
+epoch = 2.5
 [repl.analysis]
 passes = ['check_checker']
 
