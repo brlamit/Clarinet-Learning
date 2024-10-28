@@ -143,7 +143,7 @@ These are more complex types that contain a number of other types. Composites ma
 
     This results in a tuple where score is set to 20.
 
-* ## Responses:
+* # Responses:
 
     Responses are another composite type similar to optionals, but they indicate whether an action was successful or failed. A response can be either (ok ...) or (err ...). For example:
 
