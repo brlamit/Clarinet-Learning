@@ -33,7 +33,7 @@ Clarity provides special control flow functions that influence the execution of 
 * unwrap-panic
 * unwrap-err-panic
 
-## asserts!
+* ## asserts!
 
 The asserts! function is an useful control flow in clarity which allows to evaluate boolean expressions and either returns an error or permits the function to continue execution. It takes two parameters i.e boolean expression and throw value. This function executes if the boolean expression becomes true, else it return the throw value allowing to stop execution.
 
