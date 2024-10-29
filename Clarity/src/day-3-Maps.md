@@ -1,4 +1,4 @@
-Storing Data
+# Storing Data
 
 Smart contract have their own  private storage space which persists across transactions. We can define different data members that are accessible through the contract. These data members are stored on the blockchain, making it immutable after deployment.
 
@@ -6,7 +6,7 @@ Even though data members are private to the contract, they are not hidden from t
 
 Mainly there are three types of storage in smart contract. 
 
-* Constants
+* ## Constants
 
     These are unchangable value defined at the top of the contract. It is often used to store static values such as contract owner. The syntax to define a constant in Clarity is:
 
@@ -26,7 +26,7 @@ Mainly there are three types of storage in smart contract.
         (define-constant err-something (err u3400))
 
 
-* Variables 
+* ## Variables 
 
     These holds a value that can be updated through contract call. In this, each variables can store exactly one value of a predefined type. It is defined using following syntax:
 
@@ -53,7 +53,7 @@ Mainly there are three types of storage in smart contract.
         ;; Print the updated value.
         (print (var-get num))
 
-    Type Signatures
+    ## Type Signatures
 
     Each variable has a type signature that determines the kind of data it can hold. Here are common types:
 
@@ -105,7 +105,7 @@ Mainly there are three types of storage in smart contract.
     This allows for dynamic changes to complex data structures within the contract, while still maintaining control over data types.
 
 
-* Maps
+* ## Maps
 
     These are similar to variables but it allow us to associate one value with another. A map is defined using 'define-map':
 

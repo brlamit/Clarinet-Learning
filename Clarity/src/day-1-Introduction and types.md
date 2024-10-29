@@ -1,4 +1,4 @@
-## What is clarity?
+# What is clarity?
 
 Clarinet is a command-line tool that includes a Clarity runtime, aimed at simplifying the development, testing, and deployment of Clarity smart contracts. It features a Clarity REPL and a testing framework, enabling developers to quickly build and test their contracts without requiring deployment to a devnet or testnet.
 
@@ -8,9 +8,9 @@ Clarity itself is a smart contract language built for the Stacks blockchain, des
 
     (+ 4 5)
 
-## Types of Clarinet:
+# Types of Clarinet:
 
-## 1.Primitives 
+# 1.Primitives 
 
 This types are the most basic components. It can be signed or unsigned integers, booleans and principals.
     
@@ -54,7 +54,7 @@ This types are the most basic components. It can be signed or unsigned integers,
 
     * Contract Principals: These refer to smart contracts on the blockchain.
 
-## 2.Sequences 
+# 2.Sequences 
 
 This type holds a sequence of data. Clarity mostly provide three kinds of sequences : buffers, strings, and lists.
 
@@ -91,7 +91,7 @@ This type holds a sequence of data. Clarity mostly provide three kinds of sequen
 
     Lists are particularly useful for handling bulk actions, such as sending tokens to multiple recipients. You can iterate over lists using functions like map or fold.
 
-## 3.Composites 
+# 3.Composites 
 
 These are more complex types that contain a number of other types. Composites make it a lot easier to create larger smart contracts.
 
@@ -143,7 +143,7 @@ These are more complex types that contain a number of other types. Composites ma
 
     This results in a tuple where score is set to 20.
 
-* # Responses:
+* ## Responses:
 
     Responses are another composite type similar to optionals, but they indicate whether an action was successful or failed. A response can be either (ok ...) or (err ...). For example:
 

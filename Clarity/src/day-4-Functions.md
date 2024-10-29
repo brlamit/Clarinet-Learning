@@ -1,18 +1,18 @@
-Functions
+# Functions
 
 Function are segments of code which accepts input and produce output. They are used to separate program code into logical components. In clarity, there are mainly built-in functions. But in clarity, it focuses on custom functions specially public functions, private functions, and read-only functions.
 
 
 
-* Public Function
+* ## Public Function
 
     This type of function can be called externally by another contract or principal and require sending a transaction, which incurs fees. 
 
-* Private Function 
+* ## Private Function 
 
     This type of function can be called by current contract only. It cannot be called externally.
 
-* Read-only Function
+* ## Read-only Function
 
     This type of function can be invoked externally but cannot alter the blockchain state and donot requires a transaction.
 

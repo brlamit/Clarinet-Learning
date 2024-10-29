@@ -1,4 +1,4 @@
-* Public Function
+* #  Public Function
 
     This type of function can be called externally by another contract or principal and require sending a transaction, which incurs fees. But the functionality within these functions are not fully exposed. We can add conditions, ensuring that only authorized user or valid input can trigger the desired actions.
 
@@ -30,7 +30,7 @@
 
     This above code defines the public function 'num', which determines if a given integer is even or odd. If the number is even, it adds to the odd-even counter and returns "The number is even"; otherwise, it returns "The number is odd" without changing the counter.
 
-* Private Function
+* # Private Function
     
      This type of function can be called by current contract only. They cannot be accessed by other contract or directly by other transactions because private functions combine repetitive logic into reusable helper functions, they are very helpful for streamlining code. For example, we can abstract a condition which occurs multiple times in contract into a private function like, verifying contract caller identity. 
      
@@ -69,7 +69,7 @@
 
     The contract in the above example permits only the owner to change the recipients map using the add-recipient and delete-recipient public services. The is-valid-caller private function encapsulates the logic for determining whether the caller is the contract owner, avoiding duplication. The recipients list can only be updated by the contract owner thanks to this secret feature.
 
-* Read-Only Function
+* # Read-Only Function
 
     This type of function can be invoked externally but cannot alter the blockchain state and donot requires a transaction. These functions are primarily used to retrieve information, and it can return any datatype like private function. 
 
